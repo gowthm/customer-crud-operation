@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "632c47de-f22a-4cd6-8d05-3818e012090a",
+		"name": "Customer-CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6270567"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3030/customer/add",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY3MTY0ODk5OSwiZXhwIjoxNjcxNzM1Mzk5fQ.731BZevW5sdw3RocWCKhsfqEIuGRNVR-hD3GLTve6Dc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"mi-india\",\r\n    \"email\": \"miindia@gmail.com\",\r\n    \"phoneNo\": 12314124,\r\n    \"address\": \"india\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3030/customer/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"customer",
+						"add"
+					]
+				},
+				"description": "Add customer details by user token."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3030/customer/customer-search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY3MTY0ODk5OSwiZXhwIjoxNjcxNzM1Mzk5fQ.731BZevW5sdw3RocWCKhsfqEIuGRNVR-hD3GLTve6Dc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"searchData\" : 12314124\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3030/customer/customer-search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"customer",
+						"customer-search"
+					]
+				},
+				"description": "Get customer details by searchData(customer id, customer name, phone number)"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3030/customer/delete-customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY3MTY0ODk5OSwiZXhwIjoxNjcxNzM1Mzk5fQ.731BZevW5sdw3RocWCKhsfqEIuGRNVR-hD3GLTve6Dc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\": \"u9V0A\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3030/customer/delete-customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"customer",
+						"delete-customer"
+					]
+				},
+				"description": "Delete customer by ID"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3030/customer/get-customer",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY3MTY0ODk5OSwiZXhwIjoxNjcxNzM1Mzk5fQ.731BZevW5sdw3RocWCKhsfqEIuGRNVR-hD3GLTve6Dc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\": \"Izeik\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3030/customer/get-customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"customer",
+						"get-customer"
+					]
+				},
+				"description": "Get customer details by customer ID"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3030/customer/update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY3MTY0ODk5OSwiZXhwIjoxNjcxNzM1Mzk5fQ.731BZevW5sdw3RocWCKhsfqEIuGRNVR-hD3GLTve6Dc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"newmi-india\",\r\n    \"email\": \"newmiindia@gmail.com\",\r\n    \"phoneNo\": 1231412978344,\r\n    \"address\": \"singapore\",\r\n    \"customerId\": \"Izeik\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3030/customer/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"customer",
+						"update"
+					]
+				},
+				"description": "Update customer details by customer ID"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3030/customer/user-login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"admin@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3030/customer/user-login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"customer",
+						"user-login"
+					]
+				},
+				"description": "Get token by user email and password"
+			},
+			"response": []
+		}
+	]
+}
